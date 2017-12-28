@@ -1,0 +1,24 @@
+
+<label>First Name:</label>
+<input type="text" class="form-control" (input)="fname=$event.target.value"><br>
+<br>
+<label>Last Name</label>
+<input type="text" class="form-control" (input)="lname=$event.target.value">
+<br>
+<div class="panel panel-info" *ngFor="let user of users">
+    <div class="panel-heading">
+       {{user.name}}
+    </div>
+    <div class="panel-body">
+        <p>Email:{{user.email}}</p>
+        <p>User Name:{{user.username}}</p>
+         <p>User Address:
+           street:{{user.address.street}}
+          
+         </p>
+    </div>
+</div>
+<li >
+ 
+</li>
+<button class="btn btn-primary" (click)="saveData()">Submit</button>

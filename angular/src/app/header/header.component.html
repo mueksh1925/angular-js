@@ -1,0 +1,7 @@
+<nav class="navbar nav">
+<ul [ngClass]="['ul-list',' ul-inline']">
+  <li *ngFor="let MyArrayType of MyArrayTypes" [ngStyle]="{'display':'inline-block'}">
+    <a style="color:#fff">{{MyArrayType}}</a>
+  </li>
+</ul>
+</nav>
