@@ -7,6 +7,7 @@ import {dataService} from '../service/dataService.service'
   providers:[dataService]
 })
 export class HeaderComponent{
+    isIn:boolean=false;
     MyArrayTypes:Object=''
   constructor(private dataServices:dataService)
   {
@@ -17,9 +18,9 @@ export class HeaderComponent{
   {
   console.log(this.dataServices.getListOfItem())
   }
-// MyArrayTypes:object  = [
-//     { text: 'Home'},
-//     { text: 'About'},
-//     { text:'Contact Us'}]
+  menuToggle()
+  {
+    this.isIn=!this.isIn
+  }
    
 }
